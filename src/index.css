@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Playfair+Display:wght@500&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    /* position: absolute; */
+}
+p, h1, h3{
+    margin: 0;
+    padding: 0;
+}
+.date-time{
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    padding-top: 1rem;
+    color: #22343B;
+}
+.description{
+    color: #22343B;
+    display: flex;
+    justify-content: end;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+}
+.description-display{
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+.time-card{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    border-top: 1px solid rgba(27, 41, 47, 0.7);
+}
+.time-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(27, 41, 47, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 1.1rem;
+    cursor: pointer;
+}
+.time-card .time-display:hover{
+    color: rgba(27, 41, 47, 0.9);
+    background-color: rgb(129, 136, 140, .7);
+}
+.time-display .time{
+    border-bottom: 1px solid;
+}
+.time-display img{
+    background-color: rgba(27, 41, 47, 0.7);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+.mainbar{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   left: 15%;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(27, 41, 47, 0.5);
+    padding: 20px;
+    position: relative;
+    right: 20%;
+}
+.location-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: .3rem;
+    border-radius: 5px;
+    border: .01rem solid hsl(0, 0%, 70%);
+    font-size: .8rem;
+}
+.location-tab .dropdown{
+    margin-left: auto;
+    border-left: 1px solid;
+    padding-left: .3rem;
+    cursor: pointer;
+}
+.main-display{
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+}
+.next-days h3{
+    text-align: center;
+}
+.next-days .days{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-days .days-p{
+    padding: 5px;
+}
+.next-days .days-p:hover{
+    background-color: rgba(27, 41, 47, 0.8);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.day-card{
+    display: flex;
+    gap: 10px;
+    margin-top: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+.day-card img{
+    padding: 10px;
+    background-color: rgba(27, 41, 47, 0.7);
+    border-radius: 5px;
+}
+.day-card .day-card-dsc{
+    opacity: 50%;
+}
+
+.sunrise-sunset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+@media (max-width: 900px) {
+    body, .container, .mainbar, .sidebar{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .mainbar{
+        /* width: 100px */
+    }
+}
