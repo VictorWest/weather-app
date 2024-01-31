@@ -1,3 +1,6 @@
+# Weather Project
+This project enables you to view the current weather forcast for your location, per hour, as well as for the next 5 days
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
