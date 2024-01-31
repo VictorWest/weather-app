@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url("..//public/rainy.jpg")!important;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     color: white;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     overflow: hidden;
-    /* position: absolute; */
 }
 p, h1, h3{
     margin: 0;
@@ -145,19 +145,61 @@ p, h1, h3{
     align-items: center;
     padding: 1rem;
 }
-
-@media (max-width: 900px) {
+#region, .location button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+#region::placeholder{
+    color: white;
+}
+#region:focus{
+    background: transparent;
+}
+@media (max-width: 1200px) {
     body, .container, .mainbar, .sidebar{
         padding: 0;
         margin: 0;
     }
     .container{
-        flex-direction: column;
-        align-items: center;
+        display: grid;
         justify-content: center;
-        width: 100vw;
     }
     .mainbar{
-        /* width: 100px */
+        left: 0;
+    }
+    .sidebar{
+        flex-direction: row;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        padding: .6rem;
+    }
+    .location-tab{
+        /* display: none; */
+    }
+}
+@media (max-width: 680px) {
+    body{
+        background-image: none!important;
+        overflow: visible;
+        background: linear-gradient(90deg, #A6ACAA, #2F3C41)!important;
+    }
+    .mainbar{
+        display: none;
+    }
+    .location-tab{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .sidebar{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .next-days{
+        margin-top: -1rem;
     }
 }

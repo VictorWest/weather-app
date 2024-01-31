@@ -4,6 +4,8 @@ import Next from "./components/Next-Days"
 import { date, time, currentWeatherCode} from "../src/index.js"
 
 let body = document.querySelector("body")
+let dsc = document.querySelector(".description")
+let dateTime = document.querySelector(".date-time")
 
 let checkWeatherCode = (code) => {
   if(code < 4){
@@ -20,6 +22,8 @@ let checkWeatherCode = (code) => {
       return "Heavy Rainfall"
   }else if((code > 70 && code < 78) || (code > 84 && code < 87)){
       body.style.backgroundImage = "url(../snow.jpg)"
+      dsc.style.color = "white"
+      dateTime.style.color = "white"
       return "Snow Approaches. Winter is here :)"
   }else if(code >= 95){
       body.style.backgroundImage = "url(../cloudy.jpg)"
